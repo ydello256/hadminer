@@ -1,0 +1,26 @@
+# HADminer — Requirements
+
+## Server
+- PHP >= 8.1
+- Any web server (Apache, Nginx) OR PHP built-in server
+
+## PHP Extensions (enable in php.ini)
+- pdo          ; required — core database abstraction
+- pdo_mysql    ; required for MySQL / MariaDB support
+- pdo_pgsql    ; optional — PostgreSQL support
+- pdo_sqlite   ; optional — SQLite support
+- session      ; required — login session management
+
+## Databases supported
+- MySQL 5.7+   / MariaDB 10.3+
+- PostgreSQL 10+
+- SQLite 3+
+
+## No composer, no npm, no dependencies
+# Drop hadminer.php on your server and open it. That's it.
+
+## Quick start (PHP built-in server)
+#   php -S localhost:8080 hadminer.php
+
+## Verify your extensions
+#   php -m | grep -E "pdo|session"
